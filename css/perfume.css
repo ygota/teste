@@ -322,4 +322,111 @@ nav a {
         padding: 35px 20px;
     }
 }
-   
+
+    /* PRODUTOS */
+
+    .produtos {
+        padding: 70px 8%;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+        .produtos h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
+        }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+    .card {
+        background: white;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+        padding: 25px;
+        text-align: center;
+        transition: 0.4s;
+        border: 1px solid #eee;
+        overflow: hidden;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .card img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            transition: 0.4s;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .card span {
+            display: block;
+            font-size: 24px;
+            color: #c59d00;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #111;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    /* BENEFÍCIOS */
+
+    .beneficios {
+        background: white;
+        padding: 60px 8%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        gap: 30px;
+    }
+
+    .box {
+        text-align: center;
+    }
+
+        .box h4 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+    /* FOOTER */
+
+    footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+        footer h3 {
+            margin-bottom: 15px;
+            color: #d4a017;
+        }
