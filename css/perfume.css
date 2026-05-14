@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+/* css/perfume.css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8f6f2;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 22px 8%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header h1 {
+        font-size: 32px;
+        color: #d4a017;
+    }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+    nav a:hover {
+        color: #d4a017;
+    }
+
+/* IMPORTAR FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* =========================
+   BANNER PREMIUM
+========================= */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 470px; /* altura menor */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+    background-image: url('../img/banner_nitha_parfum.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+    /* ESCURECIMENTO SUAVE */
+
+    .banner::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.12) 32%, rgba(0,0,0,0.03) 100% );
+        z-index: 1;
+    }
+    
+
+/* TEXTO */
+
+.banner-texto {
+    position: relative;
+    z-index: 2;
+    width: 460px;
+    margin-top: 0;
+}
+    /* TÍTULO */
+
+    .banner-texto h1 {
+        font-family: 'Cinzel', serif;
+        font-size: 58px;
+        line-height: 1.05;
+        font-weight: 700;
+        color: #d4a43c;
+        margin-bottom: 22px;
+        letter-spacing: -1px;
+        max-width: 420px;
+        text-shadow: 0 0 10px rgba(212,164,60,0.18), 0 0 25px rgba(212,164,60,0.08);
+    }
+
+        .banner-texto h1::after {
+            content: '';
+            display: block;
+            width: 190px;
+            height: 2px;
+            margin-top: 20px;
+            background: linear-gradient( 90deg, rgba(212,164,60,0), #d4a43c, rgba(212,164,60,0) );
+        }
+
+    /* TEXTO */
+
+    .banner-texto p {
+        font-size: 19px;
+        line-height: 1.7;
+        font-weight: 300;
+        color: #d8b15a;
+        margin-bottom: 34px;
+        max-width: 430px;
+        text-shadow: 0 0 8px rgba(212,164,60,0.08);
+    }
+
+    /* BOTÃO */
+
+.btn-gold {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    background: rgba(10,14,24,0.78);
+    border: 2px solid #d4a43c;
+    color: #d4a43c;
+    padding: 16px 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+    transition: .35s ease;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 12px rgba(212,164,60,0.18), inset 0 0 10px rgba(212,164,60,0.05);
+}
+    /* BRILHO ESQUERDO */
+
+    .btn-gold::before {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        background: radial-gradient( circle, rgba(255,220,120,0.95), transparent 70% );
+        left: -20px;
+        bottom: -32px;
+        opacity: .85;
+    }
+
+    .btn-gold::after {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        background: radial-gradient( circle, rgba(255,220,120,0.95), transparent 70% );
+        right: -20px;
+        top: -32px;
+        opacity: .75;
+    }
+    /* HOVER */
+
+    .btn-gold:hover {
+        transform: translateY(-3px);
+        background: rgba(15,20,35,0.95);
+        box-shadow: 0 0 18px rgba(212,164,60,0.35), 0 0 35px rgba(212,164,60,0.18);
+    }
+    /* REMOVE IMAGEM ANTIGA */
+
+    .banner-img {
+        display: none;
+    }
+    /* =========================
+   RESPONSIVO TABLET
+========================= */
+
+    @media(max-width: 992px) {
+
+        .banner {
+            height: 78vh;
+            min-height: 620px;
+            padding-left: 6%;
+            background-position: 64% center;
+        }
+
+        .banner-texto {
+            width: 430px;
+        }
+
+            .banner-texto h2 {
+                font-size: 52px;
+            }
+
+            .banner-texto p {
+                font-size: 18px;
+
+            }
+    }
+    /* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    header {
+        padding: 16px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+    }
+
+        nav a {
+            margin-left: 0;
+            font-size: 13px;
+        }
+
+    /* BANNER */
+
+    .banner {
+        height: 620px;
+        padding: 90px 22px 60px;
+        align-items: flex-start;
+        background-position: 72% center;
+        background-size: cover;
+    }
+
+        .banner::before {
+            background: linear-gradient( 180deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.34) 45%, rgba(0,0,0,0.16) 100% );
+        }
+
+    .banner-texto {
+        width: 100%;
+        max-width: 290px;
+    }
+
+        .banner-texto h1 {
+            font-size: 38px;
+            line-height: 1.08;
+            margin-bottom: 16px;
+        }
+
+            .banner-texto h1::after {
+                width: 130px;
+            }
+
+        .banner-texto p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+    .btn-gold {
+        width: 100%;
+        max-width: 240px;
+        justify-content: center;
+        font-size: 14px;
+        padding: 14px 22px;
+    }
+
+    /* PRODUTOS */
+
+    .produtos {
+        padding: 50px 20px;
+    }
+
+        .produtos h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+        .card img {
+            height: 240px;
+        }
+
+    /* BENEFÍCIOS */
+
+    .beneficios {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+    }
+
+    footer {
+        padding: 35px 20px;
+    }
+}
+   
