@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Good Girl Supreme | Nitha Parfum</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+
+                /* =========================================================
+           CONFIGURAÇÕES GERAIS
+        ========================================================= */
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Poppins',sans-serif;
+                }
+
+                body {
+                    background: #f8f6f2;
+                    color: #222;
+                    overflow-x: hidden;
+                }
+
+                img {
+                    max-width: 100%;
+                    display: block;
+                }
+
+                /* =========================================================
+           BOTÃO VOLTAR
+        ========================================================= */
+
+                .voltar-box {
+                    width: 100%;
+                    max-width: 1400px;
+                    margin: 25px auto 0;
+                    padding: 0 20px;
+                }
+
+                .btn-voltar {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: #111;
+                    color: white;
+                    text-decoration: none;
+                    padding: 12px 22px;
+                    border-radius: 12px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    transition: 0.3s;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+                }
+
+                    .btn-voltar:hover {
+                        background: #d4a017;
+                        transform: translateY(-3px);
+                    }
+
+                /* =========================================================
+           HEADER DESKTOP
+        ========================================================= */
+
+                header {
+                    width: 100%;
+                    background: #111;
+                    padding: 18px 6%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: sticky;
+                    top: 0;
+                    z-index: 1000;
+                }
+
+                    header h1 {
+                        color: #d4a017;
+                        font-size: 28px;
+                    }
+
+                nav {
+                    display: flex;
+                    gap: 22px;
+                }
+
+                    nav a {
+                        color: white;
+                        text-decoration: none;
+                        transition: 0.3s;
+                        font-size: 15px;
+                    }
+
+                        nav a:hover {
+                            color: #d4a017;
+                        }
+
+                /* =========================================================
+           CONTAINER DESKTOP
+        ========================================================= */
+
+        .container {
+            width: 100%;
+            max-width: 1250px;
+            margin: auto;
+            padding: -20px 40px 0px;
+        }
+
+                /* =========================================================
+           PRODUTO DESKTOP
+        ========================================================= */
+
+        .produto {
+            display: grid;
+            grid-template-columns: 58% 42%;
+            gap: 24px;
+            align-items: start;
+        }
+
+                /* =========================================================
+           GALERIA DESKTOP
+        ========================================================= */
+
+                .galeria {
+                    width: 100%;
+                    margin-top: 60px;
+                }
+
+        .imagem-principal {
+            position: relative;
+            width: 100%;
+            height: 540px;
+            background: #ffffff;
+            border-radius: 34px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /*FOTO 1*/
+                    .foto1 {
+                        max-width: 400px;
+                        height: 100%;
+                        object-fit: contain;
+                        object-position: center top;
+                        margin-top: -30px;
+                    }
+        /*FOTO 2*/
+        
+        .foto2 {
+            max-width: 500px;
+            height: 200%;
+            object-fit: contain;
+            object-position: center top;
+            margin-top: 0px;
+        }
+
+
+
+
+
+
+                /* =========================================================
+           MINIATURAS
+        ========================================================= */
+
+                .miniaturas {
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                }
+
+                    .miniaturas img {
+                        width: 85px;
+                        height: 85px;
+                        object-fit: contain;
+                        background: white;
+                        border-radius: 16px;
+                        padding: 8px;
+                        cursor: pointer;
+                        border: 2px solid transparent;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+                        transition: 0.3s;
+                    }
+
+                        .miniaturas img:hover {
+                            transform: translateY(-4px);
+                            border-color: #d4a017;
+                        }
+
+                /* =========================================================
+           INFO DESKTOP
+        ========================================================= */
+
+                .info {
+                    width: 100%;
+                }
+
+                .categoria {
+                    display: inline-block;
+                    background: #d4a017;
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 30px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    margin-bottom: 18px;
+                }
+
+        .info h2 {
+            font-size: clamp(30px,4vw,60px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+                .subtitulo {
+                    color: #777;
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                }
+
+                .preco {
+                    margin-bottom: 30px;
+                }
+
+                    .preco h3 {
+                        font-size: clamp(28px,4vw,42px);
+                        color: #111;
+                    }
+
+                .estoque {
+                    color: #27ae60;
+                    font-weight: 600;
+                    margin-top: 5px;
+                }
+
+                .descricao {
+                    font-size: 16px;
+                    line-height: 1.9;
+                    color: #555;
+                    margin-bottom: 35px;
+                }
+
+                /* =========================================================
+           BOTÕES
+        ========================================================= */
+
+                .acoes {
+                    display: flex;
+                    gap: 18px;
+                    margin-top: 10px;
+                    margin-bottom: 45px;
+                    align-items: center;
+                }
+
+                .comprar {
+                    flex: 1;
+                    height: 84px;
+                    border: none;
+                    border-radius: 20px;
+                    background: #000;
+                    color: white;
+                    font-size: 22px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+                }
+
+                    .comprar:hover {
+                        transform: translateY(-4px);
+                        background: #111;
+                    }
+
+                .favorito {
+                    width: 84px;
+                    height: 84px;
+                    border-radius: 18px;
+                    border: 2px solid #e8e8e8;
+                    background: white;
+                    font-size: 34px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                    .favorito:hover {
+                        transform: translateY(-4px);
+                        border-color: #d4a017;
+                    }
+
+                /* =========================================================
+           BENEFÍCIOS DESKTOP
+        ========================================================= */
+
+        .beneficios {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 14px;
+            margin-top: 15px;
+        }
+
+        .beneficio {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 18px;
+            min-height: 120px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: 0.3s;
+        }
+
+                    .beneficio:hover {
+                        transform: translateY(-5px);
+                    }
+
+                    .beneficio h4 {
+                        font-size: 16px;
+                        margin-bottom: 12px;
+                        color: #111;
+                    }
+
+            .beneficio p {
+                color: #666;
+                line-height: 1.5;
+                font-size: 13px;
+            }
+
+                /* =========================================================
+           FOOTER
+        ========================================================= */
+
+                footer {
+                    margin-top: 90px;
+                    background: #050505;
+                    padding: 35px 20px;
+                    text-align: center;
+                }
+
+                    footer h3 {
+                        font-family: 'Cinzel',serif;
+                        font-size: 34px;
+                        letter-spacing: 1px;
+                        color: #d4a017;
+                        margin-bottom: 22px;
+                        font-weight: 700;
+                    }
+
+                .instagram-footer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 14px;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+
+                    .instagram-footer img {
+                        width: 34px;
+                        height: 34px;
+                    }
+
+                /* =========================================================
+           SETAS E CONTADOR
+        ========================================================= */
+
+                .contador {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    background: rgba(0,0,0,0.7);
+                    color: white;
+                    padding: 6px 12px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    z-index: 5;
+                }
+
+                .btn-seta {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 58px;
+                    height: 58px;
+                    border: none;
+                    border-radius: 50%;
+                    background: rgba(0,0,0,0.75);
+                    color: white;
+                    font-size: 28px;
+                    cursor: pointer;
+                    z-index: 5;
+                    transition: 0.3s;
+                }
+
+                    .btn-seta:hover {
+                        background: #d4a017;
+                    }
+
+                .esquerda {
+                    left: 15px;
+                }
+
+                .direita {
+                    right: 15px;
+                }
+
+                /* =========================================================
+           TABLET
+        ========================================================= */
+
+                @media(max-width:950px) {
+
+                    .produto {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .beneficios {
+                        grid-template-columns: repeat(2,1fr);
+                    }
+                }
+
+                /* =========================================================
+           CELULAR
+        ========================================================= */
+
+                @media(max-width:600px) {
+
+                    /* BOTÃO VOLTAR */
+
+                    .voltar-box {
+                        padding: 0 16px;
+                        margin-top: 18px;
+                    }
+
+                    .btn-voltar {
+                        width: 100%;
+                        justify-content: center;
+                        font-size: 14px;
+                        padding: 14px;
+                    }
+
+                    /* HEADER CELULAR */
+
+                    header {
+                        flex-direction: column;
+                        gap: 14px;
+                        padding: 16px;
+                    }
+
+                    nav {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        gap: 18px;
+                        flex-wrap: nowrap;
+                    }
+
+                        nav a {
+                            font-size: 14px;
+                        }
+
+                    /* CONTAINER CELULAR */
+
+                    .container {
+                        padding: 25px 16px 50px;
+                    }
+
+                    /* GALERIA CELULAR */
+
+                    .galeria {
+                        margin-top: 0;
+                    }
+
+                    .imagem-principal {
+                        height: 380px;
+                        min-height: 380px;
+                        border-radius: 22px;
+                        padding: 10px;
+                    }
+
+                        .imagem-principal img {
+                            max-width: 220px;
+                            height: 100%;
+                            margin-top: -10px;
+                        }
+
+                    /* TEXTO CELULAR */
+
+                    .info h2 {
+                        font-size: 52px;
+                    }
+
+                    .subtitulo {
+                        font-size: 16px;
+                    }
+
+                    .descricao {
+                        font-size: 15px;
+                        line-height: 1.7;
+                    }
+
+                    /* BOTÕES CELULAR */
+
+                    .acoes {
+                        flex-direction: column;
+                    }
+
+                    .comprar {
+                        width: 100%;
+                        height: 68px;
+                        font-size: 20px;
+                    }
+
+                    .favorito {
+                        width: 100%;
+                        height: 58px;
+                        font-size: 28px;
+                    }
+
+                    /* BENEFÍCIOS CELULAR */
+
+                    .beneficios {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .beneficio {
+                        min-height: auto;
+                        padding: 22px;
+                    }
+
+                        .beneficio h4 {
+                            font-size: 22px;
+                        }
+
+                        .beneficio p {
+                            font-size: 15px;
+                        }
+
+                    /* FOOTER CELULAR */
+
+                    footer h3 {
+                        font-size: 40px;
+                    }
+
+                    .instagram-footer {
+                        font-size: 18px;
+                    }
+
+                    /* SETAS CELULAR */
+
+                    .btn-seta {
+                        width: 44px;
+                        height: 44px;
+                        font-size: 22px;
+                    }
+
+                    .contador {
+                        font-size: 13px;
+                        padding: 5px 10px;
+                    }
+                }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Nitha Parfum</h1>
+
+        <nav>
+
+            <a href="../index.html">Início</a>
+            <a href="#">Perfumes</a>
+            <a href="#">Contato</a>
+
+        </nav>
+
+    </header>
+    <div class="voltar-box">
+        <a href="../index.html" class="btn-voltar">
+            ← Voltar
+        </a>
+    </div>
+    <!-- CONTAINER -->
+
+    <div class="container">
+
+        <section class="produto">
+
+            <!-- GALERIA -->
+
+            <div class="galeria">
+
+                <div class="imagem-principal">
+
+                    <!-- CONTADOR -->
+                    <div class="contador" id="contador">
+                        1/2
+                    </div>
+
+                    <!-- BOTÃO ESQUERDA -->
+                    <button class="btn-seta esquerda" onclick="fotoAnterior()">
+                        ❮
+                    </button>
+
+                    <!-- IMAGEM -->
+                    <img id="imagemGrande"
+                         class="foto1"
+                         src="../img/goodgirl2.webp"
+                         alt="Good Girl Supreme">
+
+                    <!-- BOTÃO DIREITA -->
+                    <button class="btn-seta direita" onclick="proximaFoto()">
+                        ❯
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- INFO -->
+
+            <div class="info">
+
+                <div class="categoria">
+                    PERFUME FEMININO
+                </div>
+
+                <h2>Good Girl Supreme</h2>
+
+                <p class="subtitulo">
+                    Carolina Herrera • Miniatura 25ml
+                </p>
+
+                <div class="preco">
+
+                    <h3>R$ 70,00</h3>
+
+                    <p class="estoque">
+                        ✔ Produto disponível
+                    </p>
+
+                </div>
+
+                <p class="descricao">
+
+                    Good Girl Supreme possui uma fragrância
+                    sofisticada, intensa e extremamente feminina.
+                    Inspirado no clássico importado da Carolina Herrera,
+                    entrega elegância, sensualidade e presença marcante.
+
+                    Ideal para encontros, festas, eventos noturnos
+                    e mulheres que gostam de perfumes doces,
+                    modernos e envolventes.
+
+                </p>
+
+                <!-- BOTÕES -->
+
+                <div class="acoes">
+
+                    <button class="comprar"
+                            onclick="window.location.href='https://wa.me/5511999999999?text=Olá,%20quero%20comprar%20o%20Good%20Girl%20Supreme%2025ml'">
+
+                        Comprar Agora
+
+                    </button>
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <!-- BENEFÍCIOS -->
+
+                <div class="beneficios">
+
+                    <div class="beneficio">
+
+                        <h4>🚚 Envio Rápido</h4>
+
+                        <p>
+                            Entregamos para todo Brasil
+                            com segurança.
+                        </p>
+
+                    </div>
+
+                    <div class="beneficio">
+
+                        <h4>🔒 Compra Segura</h4>
+
+                        <p>
+                            Pagamentos via Pix e cartão.
+                        </p>
+
+                    </div>
+
+                    <div class="beneficio">
+
+                        <h4>✨ Alta Fixação</h4>
+
+                        <p>
+                            Perfume premium duradouro.
+                        </p>
+
+                    </div>
+
+                    <div class="beneficio">
+
+                        <h4>🎁 Ótimo Presente</h4>
+
+                        <p>
+                            Embalagem elegante e sofisticada.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>Nitha Parfum</h3>
+
+        <div class="instagram-footer">
+
+            <img src="../img/instagram.png" alt="Instagram">
+
+            <span>@nitha_parfumcg</span>
+
+        </div>
+
+    </footer>
+    <script>
+
+        const imagens = [
+            {
+                src: "../img/goodgirl2.webp",
+                classe: "foto1"
+            },
+
+            {
+                src: "../img/goodgirlsupremee2.webp",
+                classe: "foto2"
+            }
+        ];
+
+        let fotoAtual = 0;
+
+        function mostrarFoto() {
+
+            const imagem = document.getElementById("imagemGrande");
+
+            imagem.src = imagens[fotoAtual].src;
+
+            imagem.className = imagens[fotoAtual].classe;
+
+            document.getElementById("contador").innerText =
+                (fotoAtual + 1) + "/" + imagens.length;
+        }
+
+        function proximaFoto() {
+
+            fotoAtual++;
+
+            if (fotoAtual >= imagens.length) {
+                fotoAtual = 0;
+            }
+
+            mostrarFoto();
+        }
+
+        function fotoAnterior() {
+
+            fotoAtual--;
+
+            if (fotoAtual < 0) {
+                fotoAtual = imagens.length - 1;
+            }
+
+            mostrarFoto();
+        }
+
+    </script>
+
+</body>
+</html>
+
